@@ -24,7 +24,7 @@
         <javaModelGenerator targetPackage="com.demo.mykine.springtxjpa.domain.entity.${moduleName}"
                             targetProject="src/main/java"/>
         <!--mapper.xml-->
-        <sqlMapGenerator targetPackage="com.demo.mykine.springtxjpa.dao.${moduleName}"
+        <sqlMapGenerator targetPackage="mappers.${moduleName}"
                          targetProject="src/main/resources"/>
 
         <!--mapper接口-->
