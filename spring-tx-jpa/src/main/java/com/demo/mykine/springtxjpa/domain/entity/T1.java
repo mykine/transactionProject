@@ -1,4 +1,4 @@
 package com.demo.mykine.springtxjpa.domain.entity;
 
-public class UserEntity {
+public class T1 {
 }
