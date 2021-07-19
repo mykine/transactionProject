@@ -2,6 +2,7 @@ package com.demo.mykine.springtxjpa.controller;
 
 import com.demo.mykine.springtxjpa.dao.User.TUsersMapper;
 import com.demo.mykine.springtxjpa.domain.entity.User.TUsers;
+import com.demo.mykine.springtxjpa.service.UserService;
 import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private TUsersMapper usersMapper;
+    private UserService userService;
 
     @GetMapping("/test")
     public TUsers testInsert(){
@@ -21,7 +22,11 @@ public class UserController {
         user.setAge(1);
         user.setName("james");
         user.setGender(1);
-        usersMapper.insertSelective(user);
+        try {
+            userService.addData(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return user;
     }
 }
