@@ -6,4 +6,7 @@ public interface UserService {
 
     int addData(TUsers user) throws Exception;
 
+    int addData2(TUsers user) throws Exception;
+
+
 }

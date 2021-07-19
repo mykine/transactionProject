@@ -23,7 +23,8 @@ public class UserController {
         user.setName("james");
         user.setGender(1);
         try {
-            userService.addData(user);
+//            userService.addData(user);
+            userService.addData2(user);
         } catch (Exception e) {
             e.printStackTrace();
         }
